@@ -11,16 +11,31 @@
         <div class="center text-big bold">
             Hi! I am Sanketh Surey.
         </div>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-    <script>
-  var callbackFunction = function(data) {
-    var wind = data.query.results.channel.wind;
-    alert(wind.chill);
-  };
-</script>
+       GET https://api.darksky.net/forecast/0123456789abcdef9876543210fedcba/42.3601,-71.0589
 
-<script src="https://query.yahooapis.com/v1/public/yql?q=select wind from weather.forecast where woeid in (select woeid from geo.places(1) where text='chicago, il')&format=json&callback=callbackFunction"></script>
-
+{
+  "latitude": 47.20296790272209,
+  "longitude": -123.41670367098749,
+  "timezone": "America/Los_Angeles",
+  "currently": {
+    "time": 1453402675,
+    "summary": "Rain",
+    "icon": "rain",
+    "nearestStormDistance": 0,
+    "precipIntensity": 0.1685,
+    "precipIntensityError": 0.0067,
+    "precipProbability": 1,
+    "precipType": "rain",
+    "temperature": 48.71,
+    "apparentTemperature": 46.93,
+    "dewPoint": 47.7,
+    "humidity": 0.96,
+    "windSpeed": 4.64,
+    "windBearing": 186,
+    "visibility": 4.3,
+    "cloudCover": 0.73,
+    "pressure": 1009.7,
+    "ozone": 328.35
+  },
     </body>
 </html>
